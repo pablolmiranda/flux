@@ -14,15 +14,14 @@
     "connect-browserify": "~2.0.1",
     "envify": "~2.0.1",
     "jest-cli": "~0.1.17",
-    "reactify": "~0.14.0",
+    "reactify": "^0.14.0",
     "statics": "~0.1.0",
-    "uglify-js": "~2.4.15",
-    "watchify": "~0.10.2",
-    "supervisor": "~0.6.0"
+    "supervisor": "~0.6.0",
+    "uglify-js": "~2.4.15"
   },
   "scripts": {
     "start": "supervisor -i node_modules -e js,jsx server/server.js",
-    "build": "STATIC_ROOT=./js NODE_ENV=production browserify js/app.js > server/assets/bundle.js",
+    "build": "STATIC_ROOT=./js NODE_ENV=production browserify -t [ reactify --harmony ] js/app.js > server/assets/bundle.js",
     "collect-static": "collect-static . ./static",
     "test": "jest"
   },
