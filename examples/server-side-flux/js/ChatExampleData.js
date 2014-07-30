@@ -84,7 +84,3 @@ module.exports = {
   }
 
 };
-
-function onServer() {
-    return (typeof window === 'undefined');
-}
