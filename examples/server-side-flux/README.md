@@ -1,8 +1,9 @@
 ## Flux Chat Example
 
-This is an example application we've created to show an example of how a Flux
-app is structured, and how you might use waitFor to make sure the Stores'
-registered callbacks are called in the correct order.
+This is an example application differ of the basic Flux Chat application 
+in the way it is renderred.
+The goal here is show how you can apply the Flux Architecture on the server
+side rendering process.
 
 ## Running
 
@@ -15,11 +16,12 @@ This will install all dependencies.
 
 To build the project, first run this command:
 
+`npm run build`
 `npm start`
 
-This will perform an initial build and start a watcher process that will
-update build.js with any changes you wish to make.  This watcher is
-based on [Browserify](http://browserify.org/) and
+This will perform an initial build and start a express server that will
+listen for request on the [http://localhost:3000](http://localhost:3000).
+The build script is based on [Browserify](http://browserify.org/) and
 [Watchify](https://github.com/substack/watchify), and it transforms
 React's JSX syntax into standard JavaScript with
 [Reactify](https://github.com/andreypopp/reactify).
